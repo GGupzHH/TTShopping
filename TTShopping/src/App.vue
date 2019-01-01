@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
 
 <script>
+// 导出 export default  导出一个对象   就像原来那样  也是一个对象  然后在根组件中使用
 export default {
   name: 'App'
 }
@@ -18,6 +18,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  min-width: 1100px;
+  height: 100%;
 }
 </style>
