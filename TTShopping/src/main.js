@@ -12,7 +12,17 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/index.css'
 // 导入封装好的
 import Http from './plugins/http'
+// 导入时间过滤器插件
+import moment from 'moment'
+// 面包屑引入
+import MyBread from '@/components/cusBread.vue'
 
+// 公共组件 面包屑
+Vue.component(MyBread.name, MyBread)
+// 全局过滤器  过滤时间
+Vue.filter('dataSet', (v) => {
+  return moment(v).format('YYYY-MM-DD')
+})
 // 使用导入的方法
 Vue.use(Http)
 Vue.use(ElementUI)

@@ -13,7 +13,7 @@
           <el-input type="password" placeholder="请输入密码" v-model="fromdata.password" clearable ></el-input>
         </el-main>
       </el-container>
-      <el-button type="primary" class="l-btn" @click="loginfn()">登录</el-button>
+      <el-button type="primary" class="l-btn" @click="loginfn()" autofocus>登录</el-button>
     </div>
   </div>
 </template>
@@ -27,7 +27,6 @@ export default {
         username: '',
         password: ''
       }
-
     }
   },
   methods: {
