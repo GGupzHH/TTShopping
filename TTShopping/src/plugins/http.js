@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Message } from 'element-ui'
 
 const Http = {}
 Http.install = function (Vue) {
@@ -16,6 +17,17 @@ Http.install = function (Vue) {
     // 对请求错误做些什么
     return Promise.reject(error)
   })
+  // 响应拦截   同意处理拦截响应 做出提示
+  axios.interceptors.response.use(function (response) {
+    if (response.data.meta.status === 200 || response.data.meta.status === 201) {
+      Message.success(response.data.meta.msg)
+    }
+    return response
+  }, function (error) {
+    // 对响应错误做点什么
+    return Promise.reject(error)
+  })
+
   Vue.prototype.$http = axios
 }
 

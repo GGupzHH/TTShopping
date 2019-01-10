@@ -27,6 +27,10 @@
     <!--表格显示-->
     <template>
       <el-table
+          v-loading="loading2"
+          element-loading-text="拼命加载中"
+          element-loading-spinner="el-icon-loading"
+          element-loading-background="rgba(0, 0, 0, 0.8)"
           :data="tableData"
           style="width: 100%; margin-top: 30px;">
           <el-table-column
@@ -158,6 +162,7 @@
 export default {
   data: function () {
     return {
+      loading2: true,
       tableData: [],
       query: '',
       pagenum: 1,
@@ -225,6 +230,9 @@ export default {
             total,
             users,
             rid
+          },
+          meta: {
+            status
           }
         }
       } = await this.$http.get(`users?query=${this.query}&pagenum=${this.pagenum}&pagesize=${this.pagesize}`)
@@ -233,6 +241,9 @@ export default {
       this.tableData = users
       this.total = total
       this.rid = rid
+      if (status === 200) {
+        this.loading2 = false
+      }
     },
     // 修改数据
     async EditUser (user) {
