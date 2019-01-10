@@ -8,6 +8,10 @@ import Rights from '@/components/rights.vue'
 import Roles from '@/components/roles.vue'
 import Goods from '@/components/goodsList.vue'
 import GoodsAdd from '@/components/goodsadd.vue'
+import Params from '@/components/params.vue'
+import Categories from '@/components/categories.vue'
+import Orders from '@/components/orders.vue'
+import Reports from '@/components/reports.vue'
 
 // 全局引入提示
 import { Message } from 'element-ui'
@@ -51,6 +55,26 @@ const router = new Router({
           name: 'goodsadd',
           path: '/goods/add',
           component: GoodsAdd
+        },
+        {
+          name: 'params',
+          path: '/params',
+          component: Params
+        },
+        {
+          name: 'categories',
+          path: '/categories',
+          component: Categories
+        },
+        {
+          name: 'orders',
+          path: '/orders',
+          component: Orders
+        },
+        {
+          name: 'reports',
+          path: '/reports',
+          component: Reports
         }
       ]
     }
