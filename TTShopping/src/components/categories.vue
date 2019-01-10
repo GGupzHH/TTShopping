@@ -107,7 +107,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .rowlist {
   margin-top: 15px;
 }

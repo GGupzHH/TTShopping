@@ -25,5 +25,5 @@ export default {
 // 3. 在组件template中使用a {{a}}
 </script>
 
-<style>
+<style scoped>
 </style>

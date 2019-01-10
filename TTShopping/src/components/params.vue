@@ -200,7 +200,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .elrowlist {
   margin-top: 20px;
 }

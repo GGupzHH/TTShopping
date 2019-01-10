@@ -214,7 +214,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .alert {
   margin-top: 15px;
 }
