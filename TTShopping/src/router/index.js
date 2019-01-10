@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 // 全局引入提示
 import { Message } from 'element-ui'
 // 引入登录组件
@@ -15,10 +15,10 @@ const Categories = () => import('@/components/categories.vue')
 const Orders = () => import('@/components/orders.vue')
 const Reports = () => import('@/components/reports.vue')
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
 // 配置路由对象  并且将new放回的对象导出   然后在main.js中使用，在vue选项中使用
-const router = new Router({
+const router = new VueRouter({
   routes: [
   // 配置登录路由
     {
