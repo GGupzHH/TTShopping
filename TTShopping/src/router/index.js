@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// 引入登录组件
-import login from '@/components/login.vue'
-import Home from '@/components/home.vue'
-import Users from '@/components/users.vue'
-import Rights from '@/components/rights.vue'
-import Roles from '@/components/roles.vue'
-import Goods from '@/components/goodsList.vue'
-import GoodsAdd from '@/components/goodsadd.vue'
-import Params from '@/components/params.vue'
-import Categories from '@/components/categories.vue'
-import Orders from '@/components/orders.vue'
-import Reports from '@/components/reports.vue'
-
 // 全局引入提示
 import { Message } from 'element-ui'
+// 引入登录组件
+const login = () => import('@/components/login.vue')
+const Home = () => import('@/components/home.vue')
+const Users = () => import('@/components/users.vue')
+const Rights = () => import('@/components/rights.vue')
+const Roles = () => import('@/components/roles.vue')
+const Goods = () => import('@/components/goodsList.vue')
+const GoodsAdd = () => import('@/components/goodsadd.vue')
+const Params = () => import('@/components/params.vue')
+const Categories = () => import('@/components/categories.vue')
+const Orders = () => import('@/components/orders.vue')
+const Reports = () => import('@/components/reports.vue')
+
 Vue.use(Router)
 
 // 配置路由对象  并且将new放回的对象导出   然后在main.js中使用，在vue选项中使用
